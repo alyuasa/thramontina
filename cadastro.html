@@ -6,7 +6,29 @@
     <title>Thramontina - Página de Cadastro</title>
 </head>
 <body>
-    <center><h1>Bem-vindo!</h1>
-    <p>Faça seu cadastro</p>
+    <center><h1>Bem-vindo!</h1></center>
+
+    <form method="POST" action="processar.php">
+        <fieldset>
+            <legend>Faça seu cadastro abaixo</legend>
+
+            <label for="nome">Digite seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <br></br>
+            
+            <label for="email">Digite seu email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <br></br>
+            
+            <label for="senha">Digite sua senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </fieldset>     
+        
+        <br></br>
+
+        <button type="submit">Enviar</button>
+    </form> 
 </body>
 </html>
