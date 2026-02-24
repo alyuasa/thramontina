@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Funcionários - Thramontina</title>
 </head>
+
 <body>
-    
+    <h1>Funcionários</h1>
+
+    <fieldset>
+        <dl>
+            <dt>Fulaninho</dt>
+            <dd>Barbeiro</dd>
+        </dl>
+
+        <dl>
+            <dt>Leila</dt>
+            <dd>Cabeleireira - Cabelos, unhas, hitratação i unhas</dd>
+        </dl>
+
+        <dl>
+            <dt>Joãozinho</dt>
+            <dd>Cabeleireiro</dd>
+        </dl>
+
+        <dl>
+            <dt>Pâmela</dt>
+            <dd>Secretária</dd>
+        </dl>
+    </fieldset>
+
+    <br></br>
+
+    <form>
+        <fieldset>
+            <legend>Adicionar Funcionário</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <br></br>
+
+            <label for="funcao">Digite a função:</label>
+            <input type="text" id="funcao" name="funcao" required>
+
+            <br></br>
+
+            <button>Clique para adicionar</button>
+        </fieldset>
+    </form>
+
+    <br></br>
+
+    <form>
+        <fieldset>
+            <legend>Remover Funcionário</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <button>Clique para remover</button>
+        </fieldset>
+    </form>
 </body>
+
 </html>
