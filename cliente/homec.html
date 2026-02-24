@@ -9,33 +9,37 @@
 
 <body>
     <form method="GET" action="homec.html">
-
+        
+        
+        
         <center>
             <h1>Agende seu horário</h1>
         </center>
-
-        <center>
-            <label for="data">Selecione uma data:</label>
-        </center>
-
-        <center>
-            <input type="date" id="data" name="data" required>
-        </center>
-        <br>
-        <center>
-            <label for="hora">Selecione o horario:</label>
-        </center>
-
-        <center>
-            <input type="time" id="hora" name="hora" min="08:00" max="17:00" required>
-        </center>
-
-        <br>
-        <br>
-
-        <center>
-            <button type="submit">Entrar</button>
-        </center>
+        
+        <fieldset>
+            <legend>Data e hora</legend>
+            <center>
+                <label for="data">Dia do corte:</label>
+            </center>
+            
+            <center>
+                <input type="date" id="data" name="data" required>
+            </center>
+            <br>
+            <center>
+                <label for="hora">Horario do corte:</label>
+            </center>
+            
+            <center>
+                <input type="time" id="hora" name="hora" min="08:00" max="17:00" required>
+            </center>
+        </fieldset>
+            
+            <br>
+            
+            <center>
+                <button type="submit">Entrar</button>
+            </center>
     </form>
 
 
