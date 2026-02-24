@@ -4,25 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home dos clientes</title>
+    <title>Agendar horário</title>
 </head>
 
 <body>
-    <center>
-        <h1>Agende seu horário</h1>
-    </center>
+    <form method="GET" action="homec.html">
 
-    <center>
-        <label for="data">Selecione uma data:</label>
-    </center>
+        <center>
+            <h1>Agende seu horário</h1>
+        </center>
 
-    <center>
-        <input type="date" id="data" name="data">
-    </center>
+        <center>
+            <label for="data">Selecione uma data:</label>
+        </center>
 
-    <center>
+        <center>
+            <input type="date" id="data" name="data" required>
+        </center>
+        <br>
+        <center>
+            <label for="hora">Selecione o horario:</label>
+        </center>
 
-    </center>
+        <center>
+            <input type="time" id="hora" name="hora" min="08:00" max="17:00" required>
+        </center>
+
+        <br>
+        <br>
+
+        <center>
+            <button type="submit">Entrar</button>
+        </center>
+    </form>
 
 
 </body>
