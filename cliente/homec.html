@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar horário</title>
+    <title>Agendar Horário</title>
 </head>
 
-<body>
+<body>        
     <form method="GET" action="seleçãob.html">
         <center>
             <h1>Agende seu horário</h1>
-        </center>
-        
+      
+      
         <fieldset>
-            <legend>Data e hora</legend>
-            <center>
-                <label for="data">Dia do corte:</label>
-            </center>
+         
+                <strong>
+                    <p>Selecione um de nossos horários dispoinveis:</p>
+                </strong>
             
-            <center>
-                <input type="date" id="data" name="data" required>
-            </center>
+
             <br>
-            <center>
-                <label for="hora">Horario do corte:</label>
-            </center>
-            
-            <center>
+                
+                <label for="hora">Escolha o horario de atendimento (08:00 - 17:00)</label>
+                
+                <br>
+
                 <input type="time" id="hora" name="hora" min="08:00" max="17:00" required>
-            </center>
-        </fieldset>
+
+            <br>
+            <br>
+            
+                <label for="data">Selecione o dia do atendimento:</label>
+                <br>
+                <input type="date" id="data" name="data" required>
             
             <br>
             
-            <center>
-                <button type="submit">Entrar</button>
-            </center>
+        </fieldset>
+        
+        <br>
+        <button type="submit">Confirmar</button>
+    </center>
+        
     </form>
-
-
-</body>
-
-</html>
+</body
