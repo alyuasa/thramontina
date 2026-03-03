@@ -1,0 +1,89 @@
+/* ────────────────────────────────────────────────
+   Estilos adicionais para Agendamentos e Avaliações
+───────────────────────────────────────────────── */
+
+h1:has(✂) {
+    /* Ajuste extra pro título com tesoura */
+    letter-spacing: 4px;
+}
+
+/* Tabela de agendamentos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.8em 0;
+    background-color: #1a1a1a;
+    border: 2px solid #424242;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #b71c1c;
+    color: white;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 1.1rem;
+    color: #eeeeee;
+}
+
+tr:nth-child(even) {
+    background-color: #222;
+}
+
+tr:hover {
+    background-color: #2d0000;
+    transition: background-color 0.15s;
+}
+
+/* Ajustes para botões nessas páginas novas */
+body:has(h2:contains("Agendamentos")) button,
+body:has(h2:contains("Avaliações")) button {
+    font-size: 1.4rem;
+    padding: 16px 32px;
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: 16px auto;
+}
+
+/* Título de agendamentos da semana */
+h1 {
+    position: relative;
+}
+
+h1::after {
+    content: "✂";
+    position: absolute;
+    font-size: 2.8rem;
+    margin-left: 12px;
+    color: #ef5350;
+    opacity: 0.85;
+}
+
+/* Pequeno ajuste visual para quando não tem conteúdo */
+p:contains("Não há avaliações") {
+    font-size: 1.4rem;
+    color: #777;
+    text-align: center;
+    padding: 40px 20px;
+    background: #1f1f1f;
+    border: 1px dashed #444;
+    border-radius: 8px;
+    margin: 2em auto;
+    max-width: 600px;
+}
