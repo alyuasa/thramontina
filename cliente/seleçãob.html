@@ -1,65 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de barbeiros</title>
+    <title>Seleção de Barbeiros</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Roboto Condensed', sans-serif;
+            min-height: 100vh;
+            padding: 30px 15px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            background: #111111;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            color: #d32f2f;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 35px;
+            text-shadow: 3px 3px 0 #000;
+        }
+
+        fieldset {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 30px 25px;
+            background: #161616;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro strong {
+            font-size: 1.3rem;
+            color: #ff5252;
+            letter-spacing: 1px;
+        }
+
+        .barbeiro {
+            text-align: center;
+            margin: 25px 0;
+            padding: 18px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: all 0.2s ease;
+        }
+
+        .barbeiro:hover {
+            border-color: #d32f2f;
+            background: #222;
+        }
+
+        .barbeiro p {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 1.7rem;
+            color: #ff5252;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .barbeiro input {
+            display: none;
+        }
+
+        .barbeiro label {
+            display: block;
+            font-size: 1.3rem;
+            color: #cccccc;
+            cursor: pointer;
+            padding: 12px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .barbeiro input:checked + label {
+            background: #d32f2f;
+            color: white;
+            border-color: #d32f2f;
+        }
+
+        .barbeiro label:hover {
+            border-color: #e53935;
+            background: #222;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            margin: 40px auto 10px;
+            padding: 18px 30px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            box-shadow: 0 5px 0 #b71c1c;
+        }
+
+        button:hover {
+            background: #e53935;
+            transform: translateY(-4px);
+            box-shadow: 0 9px 0 #b71c1c;
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 #b71c1c;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 0.95rem;
+            margin-top: 25px;
+        }
+    </style>
 </head>
 
 <body>
-    <form method="GET" action="agradecimentos.html">
 
-        <center>
-            <h1>Escolha seu barbeiro</h1>
-        </center>
+    <div class="container">
+        <h1>Escolha seu barbeiro</h1>
 
-        <fieldset>
-            <center>
-                <strong>
-                    <p>Selecione um de nossos funcionários dispoinveis para esse horário:</p>
-                </strong>
-            </center>
+        <form method="GET" action="pagamento.html">
+            <fieldset>
+                <div class="intro">
+                    <strong>Selecione um de nossos profissionais disponíveis para esse horário:</strong>
+                </div>
 
-            <br>
+                <div class="barbeiro">
+                    <p>Barbeiro Fulaninho</p>
+                    <input type="radio" id="fulaninho" name="profissional" value="Fulaninho">
+                    <label for="fulaninho">Escolher esse profissional</label>
+                </div>
 
-            <center>
-                <p>Barbeiro Fulaninho</p>
-                <input type="checkbox" id="profissional" name="profissional" value="Fulaninho">
-                <label for="aceito">Escolher esse profissional</label>
+                <div class="barbeiro">
+                    <p>Cabeleireira Leila</p>
+                    <input type="radio" id="leila" name="profissional" value="Leila">
+                    <label for="leila">Escolher essa profissional</label>
+                </div>
 
-            </center>
+                <div class="barbeiro">
+                    <p>Cabeleireiro Joãozinho</p>
+                    <input type="radio" id="joaozinho" name="profissional" value="Joãozinho">
+                    <label for="joaozinho">Escolher esse profissional</label>
+                </div>
+            </fieldset>
 
-            <br>
-            <br>
+            <button type="submit">Confirmar Escolha</button>
 
-            <center>
-                <p>Cabeleleira Leila</p>
-                <input type="checkbox" id="profissional" name="profissional" value="Leila">
-                <label for="aceito">Escolher esse profissional</label>
+            <div class="subtitle">O corte perfeito começa com a escolha certa.</div>
+        </form>
+    </div>
 
-            </center>
-
-            <br>
-            <br>
-
-            <center>
-                <p>Cabeleleiro Joãozinho</p>
-                <input type="checkbox" id="profissional" name="profissional" value="Joãozinho">
-                <label for="aceito">Escolher esse profissional</label>
-            </center>
-            
-            <br>
-            <br>
-            
-        </fieldset>
-        
-        <center>
-            <br>
-            <button type="submit">Confirmar</button>
-        </center>
-
-    </form>
 </body>
-
-</html>
+</html> 

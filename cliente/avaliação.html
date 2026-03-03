@@ -4,65 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de profissionais</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Roboto Condensed', sans-serif;
+            min-height: 100vh;
+            padding: 30px 15px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            background: #111111;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.8);
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 2.6rem;
+            color: #d32f2f;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 35px;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        fieldset {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 25px;
+            background: #161616;
+            margin-bottom: 30px;
+        }
+
+        .profissional {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .profissional p {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: #ff5252;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Sistema de estrelas */
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 8px;
+            font-size: 2.8rem;
+            direction: rtl; /* inverte para preencher da direita para esquerda */
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            color: #444;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .rating label:hover,
+        .rating label:hover ~ label,
+        .rating input:checked ~ label {
+            color: #ffca28; /* amarelo ouro clássico para estrelas */
+        }
+
+        .rating input:checked ~ label {
+            color: #ffb300;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            margin: 30px auto 10px;
+            padding: 16px 30px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            box-shadow: 0 5px 0 #b71c1c;
+        }
+
+        button:hover {
+            background: #e53935;
+            transform: translateY(-4px);
+            box-shadow: 0 9px 0 #b71c1c;
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 #b71c1c;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 0.95rem;
+            margin-top: 25px;
+        }
+    </style>
 </head>
+
 <body>
-    <form method="GET" action="agradecimentos.html">
-    <center>
 
+    <div class="container">
         <h2>Avalie nossos profissionais</h2>
-        
-    </center>
-    
-    <fieldset>
-      
-        <center>
 
-            <p>Fulaninho</p>
-            <input type="checkbox" id="5estrelas" name="5estrelas"><label for="5estrelas">★</label>
-            <input type="checkbox" id="4estrelas" name="4estrelas"><label for="4estrelas">★</label>
-            <input type="checkbox" id="3estrelas" name="3estrelas"><label for="3estrelas">★</label>
-            <input type="checkbox" id="2estrelas" name="2estrelas"><label for="2estrelas">★</label>
-           <input type="checkbox" id="1estrela" name="1estrela"><label for="1estrela">★</label>
-        
-        </center> 
-           
-           <br>
+        <form method="GET" action="agradecimentos.html">
+            <fieldset>
 
-        <center>
-        
-            <p>Leila</p>
-            <input type="checkbox" id="5estrelas" name="5estrelas"><label for="5estrelas">★</label>
-    <input type="checkbox" id="4estrelas" name="4estrelas"><label for="4estrelas">★</label>
-    <input type="checkbox" id="3estrelas" name="3estrelas"><label for="3estrelas">★</label>
-    <input type="checkbox" id="2estrelas" name="2estrelas"><label for="2estrelas">★</label>
-    <input type="checkbox" id="1estrela" name="1estrela"><label for="1estrela">★</label>
-    
-        </center>
-    
-        <br>
-        
-        <center>
-    
-            <p>Joãozinho</p>
-            <input type="checkbox" id="5estrelas" name="5estrelas"><label for="5estrelas">★</label>
-            <input type="checkbox" id="4estrelas" name="4estrelas"><label for="4estrelas">★</label>
-            <input type="checkbox" id="3estrelas" name="3estrelas"><label for="3estrelas">★</label>
-            <input type="checkbox" id="2estrelas" name="2estrelas"><label for="2estrelas">★</label>
-            <input type="checkbox" id="1estrela" name="1estrela"><label for="1estrela">★</label>
-            
-        </center>
-        
-        <br>
-        
-    </fieldset>
-    
-    <center>
-    
-        <br>
-        <button type="submit">Enviar</button>
+                <div class="profissional">
+                    <p>Fulaninho</p>
+                    <div class="rating">
+                        <input type="radio" id="fulaninho-5" name="fulaninho" value="5">
+                        <label for="fulaninho-5">★</label>
+                        <input type="radio" id="fulaninho-4" name="fulaninho" value="4">
+                        <label for="fulaninho-4">★</label>
+                        <input type="radio" id="fulaninho-3" name="fulaninho" value="3">
+                        <label for="fulaninho-3">★</label>
+                        <input type="radio" id="fulaninho-2" name="fulaninho" value="2">
+                        <label for="fulaninho-2">★</label>
+                        <input type="radio" id="fulaninho-1" name="fulaninho" value="1">
+                        <label for="fulaninho-1">★</label>
+                    </div>
+                </div>
 
-    </center>
-    
-</form>
+                <div class="profissional">
+                    <p>Leila</p>
+                    <div class="rating">
+                        <input type="radio" id="leila-5" name="leila" value="5">
+                        <label for="leila-5">★</label>
+                        <input type="radio" id="leila-4" name="leila" value="4">
+                        <label for="leila-4">★</label>
+                        <input type="radio" id="leila-3" name="leila" value="3">
+                        <label for="leila-3">★</label>
+                        <input type="radio" id="leila-2" name="leila" value="2">
+                        <label for="leila-2">★</label>
+                        <input type="radio" id="leila-1" name="leila" value="1">
+                        <label for="leila-1">★</label>
+                    </div>
+                </div>
+
+                <div class="profissional">
+                    <p>Joãozinho</p>
+                    <div class="rating">
+                        <input type="radio" id="joaozinho-5" name="joaozinho" value="5">
+                        <label for="joaozinho-5">★</label>
+                        <input type="radio" id="joaozinho-4" name="joaozinho" value="4">
+                        <label for="joaozinho-4">★</label>
+                        <input type="radio" id="joaozinho-3" name="joaozinho" value="3">
+                        <label for="joaozinho-3">★</label>
+                        <input type="radio" id="joaozinho-2" name="joaozinho" value="2">
+                        <label for="joaozinho-2">★</label>
+                        <input type="radio" id="joaozinho-1" name="joaozinho" value="1">
+                        <label for="joaozinho-1">★</label>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Enviar Avaliação</button>
+
+            <div class="subtitle">Sua opinião faz a diferença!</div>
+        </form>
+    </div>
+
 </body>
 </html>
